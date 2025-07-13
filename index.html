@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClimaCast | Previsão do Tempo Inteligente</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <div class="header">
+      <h1><i class="fas fa-cloud-sun"></i> ClimaCast</h1>
+      <button id="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <button id="btn-voltar" class="btn-voltar hidden">
+      <i class="fas fa-arrow-left"></i> Voltar
+    </button>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Digite uma cidade..."
+        autocomplete="off"
+        aria-label="Campo de pesquisa por cidade"
+      />
+      <button id="search-btn" aria-label="Buscar previsão do tempo">
+        <span id="search-text">Buscar</span>
+        <span id="search-icon"><i class="fas fa-search"></i></span>
+      </button>
+    </div>
+
+    <div id="loading-spinner" class="spinner hidden"></div>
+
+    <div id="weather-box" class="weather-box hidden">
+      <div class="location">
+        <h2 id="location-name"></h2>
+        <img id="weather-icon" alt="Ícone do clima" /> <!-- Removido src do ícone local -->
+      </div>
+      <p id="weather-description" class="weather-description"></p>
+      <div class="temperature">
+        <span id="temp-current"></span>
+        <span id="temp-feels"></span>
+      </div>
+      <div class="details">
+        <p><i class="fas fa-tint"></i> Umidade: <span id="humidity"></span>%</p>
+        <p><i class="fas fa-wind"></i> Vento: <span id="wind"></span> km/h</p>
+      </div>
+    </div>
+
+    <div id="forecast-5days" class="forecast-5days hidden">
+      <h3><i class="fas fa-calendar-alt"></i> Próximos 5 Dias</h3>
+      <div id="forecast-cards" class="forecast-cards"></div>
+    </div>
+
+    <p id="error-message" class="error-message hidden"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
