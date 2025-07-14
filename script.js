@@ -1,4 +1,4 @@
-const apiKey = "10feb69ce9e0ec2483f4dd6aadb3521c";
+const apiKey = "Sua chave API";
 
 
 const elements = {
