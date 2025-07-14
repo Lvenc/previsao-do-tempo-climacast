@@ -1,6 +1,6 @@
 const apiKey = "10feb69ce9e0ec2483f4dd6aadb3521c";
 
-// Cache de elementos DOM
+
 const elements = {
   weatherBox: document.getElementById("weather-box"),
   errorMessage: document.getElementById("error-message"),
